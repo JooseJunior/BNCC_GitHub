@@ -75,3 +75,45 @@ nav li {
 .btnBusca{
     margin: 0 3vh 0 2vh;
 }
+
+/*Rodape*/
+
+footer {
+    background: #296674;
+    height: 28.72vh;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+
+.logoFSLab {
+    height: 13.98vh;
+    width: 20.08vh;
+    margin: 15%;
+}
+
+.logoIFRO {
+    height:  20.30vh;
+    width: 11.27vh;
+    margin: 15%;
+}
+
+.teste{
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    align-content: stretch;
+    margin-right: -10%;
+    width: 62.79vh;
+}
+
+footer p, h1 {
+    font-weight: 500;
+    font-size: 1.78vh;
+    line-height: 2.23vh;
+}
+
+footer h1 {
+    font-weight: 600;
+}
