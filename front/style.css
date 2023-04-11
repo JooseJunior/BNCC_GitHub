@@ -84,7 +84,7 @@ footer {
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
-    position: fixed;
+    position: relative;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -157,7 +157,18 @@ white-space: nowrap;
         margin-bottom: 10px;
 }
 
+.imagem_meio{
+margin-top: 48px;
+margin-bottom:149px;
+height: 428px;
+width: 1079px;
+left: 153px;
+top: 793px;
+border-radius: 0px;
+
+}
 .texto1{
     color: black;
-    
+    width: 1148.45px;
+    margin-bottom: 20px;
 }
