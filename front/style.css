@@ -84,6 +84,10 @@ footer {
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
 }
 
 
@@ -116,4 +120,44 @@ footer p, h1 {
 
 footer h1 {
     font-weight: 600;
+}
+
+main{
+    min-height: 1000px;
+    margin-top: 176px;
+    margin-left: 140px;
+}
+
+.ret{
+    background: #296674;
+    width: 101px;
+    height: 33px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+h2{
+margin-top: 39px;
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 30px;
+color: black;
+white-space: nowrap;
+}
+
+.linha{
+    display: inline-block;
+        background-color: #296674;
+        height: 7px;
+        width: 1148px;
+        margin-bottom: 10px;
+}
+
+.texto1{
+    color: black;
+    
 }
