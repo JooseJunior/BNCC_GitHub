@@ -103,7 +103,7 @@ footer {
     margin: 15%;
 }
 
-.teste{
+.blocoRodape{
     display: flex;
     flex-direction: column;
     text-align: right;
@@ -122,39 +122,41 @@ footer h1 {
     font-weight: 600;
 }
 
+/*Meio*/
+
 main{
-    min-height: 1000px;
-    margin-top: 176px;
-    margin-left: 140px;
+    margin: 11.30vh;
 }
 
-.ret{
-    background: #296674;
-    width: 101px;
-    height: 33px;
+.botaoRetornar{
+    background: var(--cor-principal);
+    width: 15.02vh;
+    height: 4.91vh;
     display: flex;
     text-align: center;
     justify-content: center;
     align-items: center;
+    margin-left: -1.48vh;
 }
 
-h2{
-margin-top: 39px;
-font-family: 'Quicksand';
-font-style: normal;
-font-weight: 700;
-font-size: 24px;
-line-height: 30px;
-color: black;
-white-space: nowrap;
+main h1{
+    margin-top: 39px;
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 3.57vh;
+    line-height: 4.46vh;
+    color: black;
+    white-space: nowrap;
+    margin-left: -1.48vh;
 }
 
 .linha{
     display: inline-block;
-        background-color: #296674;
-        height: 7px;
-        width: 1148px;
-        margin-bottom: 10px;
+    background-color: var(--cor-principal);
+    height: 1.04vh;
+    width: 170.83vh;
+    margin-bottom: 1.48vh;
 }
 
 .imagem_meio{
@@ -166,9 +168,19 @@ left: 153px;
 top: 793px;
 border-radius: 0px;
 
+    margin: 7.14vh 0 12.17vh 0;
+    height: 63.69vh;
+    width: 160.56vh;
 }
 .texto1{
     color: black;
-    width: 1148.45px;
-    margin-bottom: 20px;
+    width: 170.90vh;
+    margin: 0 0vh  2vh 3vh;
+}
+
+.teste {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
