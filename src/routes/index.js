@@ -1,4 +1,5 @@
-import express from "express"
+import express from "express" //Unica importação que não referencia um arquivo
+import grupos from "./gruposRoutes.js" //Importar arquivos dentro da pasta Rotas
 
 const routes = (app) => {
     app.route('/').get((rep, res) => {
