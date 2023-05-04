@@ -7,3 +7,16 @@ controller (conecta models-view)
 view (front-end)
 
 No controller que programamos as autorizações
+
+======================================================================
+Tarefas para proxima aula
+
+* Ter pelo menos um GET no routes
+* Construir o controller
+Ou seja, criar as rotas e o controller de cada rota criada
+
+Roteiro:
+* Definir as rotas a serem criadas
+* Criar Sprint para essa atividade
+* Sexta 07/05/23 esta nessa atividade, monitoria prof. Gilberto.
+
