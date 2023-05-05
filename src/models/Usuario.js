@@ -1,4 +1,4 @@
-//GUSTAVO
+//Novo
 
 import mongoose from "mongoose";
 import mongoosePaginate from 'mongoose-paginate';

@@ -1,3 +1,5 @@
+//Novo
+
 import express from "express";
 // import GruposController from "../controllers/GruposController.js"; //linha exemplo, substituir: GruposController
 
