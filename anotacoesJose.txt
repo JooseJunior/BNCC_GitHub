@@ -19,4 +19,3 @@ Roteiro:
 * Definir as rotas a serem criadas
 * Criar Sprint para essa atividade
 * Sexta 07/05/23 esta nessa atividade, monitoria prof. Gilberto.
-
