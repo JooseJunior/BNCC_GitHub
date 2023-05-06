@@ -19,3 +19,14 @@ Roteiro:
 * Definir as rotas a serem criadas
 * Criar Sprint para essa atividade
 * Sexta 07/05/23 esta nessa atividade, monitoria prof. Gilberto.
+
+=======================================================================
+npm i nodemon //Instalar nodemon
+npm start // Para ver no navegador
+
+
+* Fabrica bncc
+* Estudar prova
+* DesenvolvimentobSebrae Janaina
+* Orçamento Farmacia
+* Desenvolvimento Farmacia

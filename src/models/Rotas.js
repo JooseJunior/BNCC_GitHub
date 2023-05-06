@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import mongoose from "mongoose";
 // import mongoosePaginate from 'mongoose-paginate';
 
@@ -23,4 +21,3 @@ const rotaSchema = new mongoose.Schema(
 const rotas = mongoose.model('rotas', rotaSchema);
 
 export default rotas;
->>>>>>> c226bdc9be196f1bc723f657abf81e537e1f622a
