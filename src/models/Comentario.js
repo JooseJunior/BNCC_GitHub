@@ -32,4 +32,4 @@ const ComentarioSchema = new moongose.Schema({
 
     const comentario = moongose.model('Comentario', ComentarioSchema);
 
-    module.exports = comentario;
+    export default comentario;
