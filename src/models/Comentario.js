@@ -1,6 +1,7 @@
 const moongose = require('moongose');
 
-const ComentarioSchema = new mongoose.Schema({
+const ComentarioSchema = new moongose.Schema({
+
 
     text:{
         type: String,
@@ -27,4 +28,8 @@ const ComentarioSchema = new mongoose.Schema({
         type: Date, 
         default: Date.now
     }
-})
+});
+
+    const comentario = moongose.model('Comentario', ComentarioSchema);
+
+    module.exports = comentario;
