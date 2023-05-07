@@ -1,5 +1,5 @@
 //Novo
-const Comentario = require('../models/Comentario');
+const Comentario = req('../models/Comentario');
 
 // Função para criar um novo comentário
 const criarComentario = async (req, res) => {
@@ -67,3 +67,20 @@ module.exports = {
   excluirComentario,
   darLikeComentario
 };
+
+
+
+//criarComentario: esta função cria um novo comentário a partir dos dados enviados pelo usuário no corpo da solicitação HTTP. Ela utiliza o modelo Comentario do banco de dados MongoDB através do método save() para salvar o novo comentário no banco de dados. Em caso de sucesso, retorna uma resposta HTTP com status 201 (criado) e o comentário criado no corpo da resposta. Em caso de falha, retorna uma resposta HTTP com status 400 (bad request) e uma mensagem de erro no corpo da resposta.
+
+
+//listarComentarios: esta função retorna uma lista de todos os comentários associados a um post específico, que é identificado pelo parâmetro postId na solicitação HTTP. Ela utiliza o modelo Comentario do banco de dados MongoDB através do método find() para buscar todos os comentários com o postId informado. Em caso de sucesso, retorna uma resposta HTTP com status 200 (ok) e a lista de comentários no corpo da resposta. Em caso de falha, retorna uma resposta HTTP com status 400 (bad request) e uma mensagem de erro no corpo da resposta.
+
+
+//atualizarComentario: esta função atualiza um comentário existente no banco de dados com base no ID do comentário fornecido no parâmetro comentarioId. Ela utiliza o modelo Comentario do banco de dados MongoDB através do método findByIdAndUpdate() para encontrar e atualizar o comentário com os novos dados enviados pelo usuário no corpo da solicitação HTTP. Em caso de sucesso, retorna uma resposta HTTP com status 200 (ok) e o comentário atualizado no corpo da resposta. Em caso de falha, retorna uma resposta HTTP com status 400 (bad request) e uma mensagem de erro no corpo da resposta.
+
+
+//excluirComentario:esta função exclui um comentário existente do banco de dados com base no ID do comentário fornecido no parâmetro comentarioId. Ela utiliza o modelo Comentario do banco de dados MongoDB através do método findByIdAndDelete() para encontrar e excluir o comentário com o comentarioId informado. Em caso de sucesso, retorna uma resposta HTTP com status 200 (ok) e uma mensagem de confirmação no corpo da resposta. Em caso de falha, retorna uma resposta HTTP com status 400 (bad request) e uma mensagem de erro no corpo da resposta.
+
+
+//darLikeComentario: esta função adiciona um "like" (ou curtida) a um comentário existente no banco de dados com base no ID do comentário fornecido no parâmetro comentarioId. Ela utiliza o modelo Comentario do banco de dados MongoDB através do método findByIdAndUpdate() para encontrar e atualizar o comentário com um incremento de 1 no campo likes. Em caso de sucesso, retorna uma resposta HTTP com status 200 (ok) e o comentário atualizado no corpo da resposta. Em caso de falha, retorna uma resposta HTTP com status 400 (bad request) e uma mensagem de erro no corpo da resposta.
+
