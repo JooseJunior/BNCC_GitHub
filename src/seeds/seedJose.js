@@ -1,6 +1,9 @@
+import mongoose from "mongoose";
+// import mongoosePaginate from 'mongoose-paginate';
+
 import faker from 'faker-br';
 import bcrypt from 'bcryptjs';
-import db from '../config/dbConect.js';
+import db from '../config/dbConnect.js';
 import Rota from '../models/Rotas.js';
 import Grupo from '../models/GrupoUsuario.js';
 import Usuario from '../models/Usuario.js';
@@ -112,7 +115,7 @@ function seedUsuario(qtdusuarios) {
             ativo: true,
             // link_foto: faker.image.avatar(),
             rotas: rotas,
-            grupos: removerChaves(grupos)
+            // grupos: removerChaves(grupos)
 
         }
         usuarios.push(seedUsuarios);
@@ -132,4 +135,4 @@ function senhaHash() {
 }
 
 //Deligando a conexão com o banco de dados com mensagem de sucesso ou de erro
-db.close((err) => { err ? console.log(err) : console.log('Conexão com o banco encerrada!') });
+// db.close((err) => { err ? console.log(err) : console.log('Conexão com o banco encerrada!') });

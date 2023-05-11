@@ -3,8 +3,6 @@ import * as dotenv from 'dotenv'; // necessário para leitura do arquivo de vari
 
 dotenv.config();
 
-
-
 await mongoose.connect(process.env.DB_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
