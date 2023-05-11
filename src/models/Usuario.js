@@ -12,17 +12,17 @@ const usuarioSchema = new mongoose.Schema({
     },
     senha: { type: String, minlength: 8, trim: true, required: true, select: false },
     ativo: { type: Boolean, default: false },
-    // rotas: [
-    //     {
-    //         _id: { type: mongoose.Schema.Types.ObjectId, ref: 'rotas' },    //ID da rota
-    //         rota: { type: String, trim: true, required: true },             //Nome da rota
-    //         verbo_get: { type: Boolean },
-    //         verbo_put: { type: Boolean },
-    //         verbo_patch: { type: Boolean },
-    //         verbo_delete: { type: Boolean },
-    //         verbo_post: { type: Boolean }
-    //     }
-    // ]
+    rotas: [
+        {
+            _id: { type: mongoose.Schema.Types.ObjectId, ref: 'rotas' },    //ID da rota
+            rota: { type: String, trim: true, required: true },             //Nome da rota
+            verbo_get: { type: Boolean },
+            verbo_put: { type: Boolean },
+            verbo_patch: { type: Boolean },
+            verbo_delete: { type: Boolean },
+            verbo_post: { type: Boolean }
+        }
+    ]
 }
 );
 
