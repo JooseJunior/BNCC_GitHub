@@ -2,7 +2,7 @@ Anotações da aula! 03/05/2023
 
 Server.js > app.js > index.js > routes > controller.js < models 
 
-models (classes)
+models (classes = Gabarito)
 controller (conecta models-view)
 view (front-end)
 

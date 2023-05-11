@@ -11,9 +11,8 @@ const usuarioSchema = new mongoose.Schema({
         match: /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/
     },
     senha: { type: String, minlength: 8, trim: true, required: true, select: false },
-    ativo: { type: Boolean, default: false },
-    rotas: [
-        {
+    ativo: { type: Boolean, default: true },
+    rotas: [ {
             _id: { type: mongoose.Schema.Types.ObjectId, ref: 'rotas' },    //ID da rota
             rota: { type: String, trim: true, required: true },             //Nome da rota
             verbo_get: { type: Boolean },
@@ -21,8 +20,7 @@ const usuarioSchema = new mongoose.Schema({
             verbo_patch: { type: Boolean },
             verbo_delete: { type: Boolean },
             verbo_post: { type: Boolean }
-        }
-    ]
+        }]
 }
 );
 
