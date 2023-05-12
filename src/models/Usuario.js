@@ -21,6 +21,7 @@ const usuarioSchema = new mongoose.Schema({
             verbo_delete: { type: Boolean },
             verbo_post: { type: Boolean }
         }]
+        
 }
 );
 
