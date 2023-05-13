@@ -1,9 +1,10 @@
 import mongoose from "mongoose";
-// import mongoosePaginate from 'mongoose-paginate';
+import mongoosePaginate from 'mongoose-paginate-v2';
 
 const rotaSchema = new mongoose.Schema(
     {
-        rota: { type: String, required: true, unique: true },
+        rota: { type: String, required: true },
+        dominio: { type: String, required: true },
         ativo: { type: Boolean, default: true },
         verbo_get: { type: Boolean },
         verbo_put: { type: Boolean },
@@ -13,6 +14,10 @@ const rotaSchema = new mongoose.Schema(
     },
     {
         versionKey: false
+    },
+    // criar um indice composto para rota e dominio
+    {
+        indexes: [{ rota: 1, dominio: 1 }]
     }
 );
 
