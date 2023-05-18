@@ -4,8 +4,8 @@ import mongoosePaginate from 'mongoose-paginate-v2';
 // Schema -> construtor para instanciar objetos no banco
 
 const topicoSchema = new mongoose.Schema({
-    titulo: { type: String, required: true },
-    descricao: { type: String, required: true },
+    titulo: { type: String, required:[true, 'Título obrigatório'] },
+    descricao: { type: String, required: [true, 'Descrição obrigatória'] },
     usuario: { _id: { type: mongoose.Schema.Types.ObjectId, ref: 'usuarios' } },
     criando_em: { type: Date, default: Date.now },
     ativo: { type: Boolean, default: true },
@@ -14,7 +14,7 @@ const topicoSchema = new mongoose.Schema({
     ],
     discussao: [
         {
-            tema: { type: String, required: true },
+            tema: { type: String, required: [true, 'Tema obrigatório'] },
             criando_em: { type: Date, default: Date.now },
             usuario: { _id: { type: mongoose.Schema.Types.ObjectId, ref: 'usuarios' } },
             like: [
@@ -31,7 +31,7 @@ const topicoSchema = new mongoose.Schema({
             ],
             commentario: [
                 {
-                    texto: { type: String, required: true },
+                    texto: { type: String, required: [true, 'Texto obrigatório'] },
                     criando_em: { type: Date, default: Date.now },
                     usuario: { _id: { type: mongoose.Schema.Types.ObjectId, ref: 'usuarios' } },
                     like: [

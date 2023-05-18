@@ -3,8 +3,8 @@ import mongoosePaginate from 'mongoose-paginate-v2';
 
 const rotaSchema = new mongoose.Schema(
     {
-        rota: { type: String, required: true },
-        dominio: { type: String, required: true },
+        rota: { type: String, required: [true, 'Rota obrigatória'] },
+        dominio: { type: String, required: [true, 'Dominio obrigatório']},
         ativo: { type: Boolean, default: true },
         verbo_get: { type: Boolean },
         verbo_put: { type: Boolean },
