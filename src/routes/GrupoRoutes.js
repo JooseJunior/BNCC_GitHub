@@ -1,5 +1,5 @@
 import express from "express";
-import GrupoController from "../controllers/GrupoUsuarioController.js";
+import GrupoController from "../controllers/GrupoController.js";
 // import AuthMiddleware from "../middlewares/AuthMiddleware.js";
 
 const router = express.Router();

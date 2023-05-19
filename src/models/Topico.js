@@ -60,4 +60,3 @@ topicoSchema.plugin(mongoosePaginate);
 const topicos = mongoose.model('topicos', topicoSchema);
 
 export default topicos;
-
