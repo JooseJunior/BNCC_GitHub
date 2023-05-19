@@ -9,7 +9,7 @@ const linhaTempoSchema = new mongoose.Schema({
             _id: { type: mongoose.Schema.Types.ObjectId, ref: 'topicos' }
         }
     ],
-    descricao: { type: String, required: true },
+    descricao: { type: String, required:[true, 'Descrição obrigatória'] },
     criando_em: { type: Date, default: Date.now }, 
     atualizado_em: { type: Date}
 },
