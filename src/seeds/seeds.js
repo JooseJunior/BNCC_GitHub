@@ -129,12 +129,11 @@ function seedUsuario(qtdusuarios) {
     return usuarios;
 }
 
-seedUsuario(100);
+seedUsuario(10);
 await Usuario.collection.insertMany(usuarios);
 console.log(usuarios.length + ' Usuarios inseridos!');
 
 // função para encrytar senha usando bcryptjs
-
 function senhaHash() {
     return bcrypt.hashSync('123', 8);
 }
@@ -208,7 +207,9 @@ function getDiscussao() {
     return discussao;
 }
 
+//==================================================================================
 // gerar topicos aleatorios
+
 await Topico.deleteMany();
 
 const topicos = [];
@@ -234,7 +235,7 @@ function seedTopicos(qtdtopicos) {
     return topicos;
 }
 
-seedTopicos(5000);
+seedTopicos(5);
 await Topico.collection.insertMany(topicos);
 console.log(topicos.length + ' Topicos inseridos!');
 

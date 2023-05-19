@@ -13,6 +13,7 @@ export default class UsuarioController{
             return res.status(201).json({message: "Usuário cadastrado com sucesso"});
 
         } catch (error){
+            console.log(error)
             return res.status(500).json({error: true, code: 500, message:"Erro interno do servidor"});
         }
     }

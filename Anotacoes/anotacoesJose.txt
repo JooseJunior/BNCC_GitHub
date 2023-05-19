@@ -23,10 +23,3 @@ Roteiro:
 =======================================================================
 npm i nodemon //Instalar nodemon
 npm start // Para ver no navegador
-
-
-* Fabrica bncc
-* Estudar prova
-* DesenvolvimentobSebrae Janaina
-* Orçamento Farmacia
-* Desenvolvimento Farmacia

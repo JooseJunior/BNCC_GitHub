@@ -1,6 +1,6 @@
-import Grupo from "../models/GrupoUsuario.js";
+import Grupo from "../models/Grupo.js";
 
-export default class GrupoUsuarioController{
+export default class GrupoController{
     static cadastrarGrupo = async (req, res) => {
         try {
             const grupo = new Grupo(req.body); //Pega o corpo da requisição
