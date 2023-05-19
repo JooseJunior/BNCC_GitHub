@@ -1,0 +1,32 @@
+Anotações da aula! 03/05/2023
+
+Server.js > app.js > index.js > routes > controller.js < models 
+
+models (classes = Gabarito)
+controller (conecta models-view)
+view (front-end)
+
+No controller que programamos as autorizações
+
+======================================================================
+Tarefas para proxima aula
+
+* Ter pelo menos um GET no routes
+* Construir o controller
+Ou seja, criar as rotas e o controller de cada rota criada
+
+Roteiro:
+* Definir as rotas a serem criadas
+* Criar Sprint para essa atividade
+* Sexta 07/05/23 esta nessa atividade, monitoria prof. Gilberto.
+
+=======================================================================
+npm i nodemon //Instalar nodemon
+npm start // Para ver no navegador
+
+
+* Fabrica bncc
+* Estudar prova
+* DesenvolvimentobSebrae Janaina
+* Orçamento Farmacia
+* Desenvolvimento Farmacia

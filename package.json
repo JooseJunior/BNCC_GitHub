@@ -1,0 +1,40 @@
+{
+  "name": "bncc-back-end",
+  "version": "1.0.0",
+  "description": "Projeto BNCC Fábrica de Software 2023.1",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "server.js",
+    "dev": "nodemon server.js",
+    "seed": "node src/seeds/seeds.js"
+  },
+  "repository": {
+    "swagger-jsdoc": "^6.2.5",
+    "swagger-ui-express": "^4.5.0",
+    "type": "git",
+    "url": "ssh://git@gitlab.fslab.dev:4241/fs-ii-turma-2022-bncc/bncc-back-end.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "faker": "^6.6.6",
+    "faker-br": "^0.4.1",
+    "jsonwebtoken": "^9.0.0",
+    "mongoose": "^7.1.1",
+    "mongoose-paginate": "^5.0.3",
+    "mongoose-paginate-v2": "^1.7.1",
+    "nodemon": "^2.0.22",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^4.6.2"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^7.6.0"
+  }
+}
