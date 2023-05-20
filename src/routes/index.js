@@ -2,6 +2,7 @@ import express from "express" //Unica importação que não referencia um arquiv
 import teste from "./teste.js" //Importar arquivos dentro da pasta Rotas
 import usuarios from "../routes/UsuarioRoutes.js"
 import login from "../routes/LoginRoutes.js"
+import topicos from "../routes/TopicoRoutes.js"
 
 const routes = (app) => {
     app.route('/').get((rep, res) => {
@@ -11,7 +12,8 @@ const routes = (app) => {
     app.use(
         express.json(),
         usuarios,
-        login
+        login,
+        topicos
     )
 
 }
