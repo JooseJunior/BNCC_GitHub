@@ -1,9 +1,9 @@
 //Novo
-const LinhaTempo = require('../models/LinhaTempo');
+import LinhaTempo from ('../models/LinhaTempo');
 
 exports.listarLinhaTempo = async function(req, res) {
   try {
-    const linhaTempo = await LinhaTempo.find().sort({ dataPublicacao: 1 });
+    const linhaTempo = await LinhaTempo.find().sort({ criando_em: 1 });
     res.json(linhaTempo);
   } catch (err) {
     res.status(500).send(err);
@@ -20,8 +20,8 @@ exports.obterLinhaTempo = async function(req, res) {
 };
 
 exports.adicionarLinhaTempo = async function(req, res) {
-  const { titulo, descricao, dataPublicacao, arquivo } = req.body;
-  const linhaTempo = new LinhaTempo({ titulo, descricao, dataPublicacao, arquivo });
+  const { topico, descricao, criando_em, atualizado_em } = req.body;
+  const linhaTempo = new LinhaTempo({ topico, descricao, criando_em, atualizado_em });
   try {
     await linhaTempo.save();
     res.status(201).json(linhaTempo);
