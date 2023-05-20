@@ -9,9 +9,9 @@ router
     .get("/topicos", TopicoController.listarTopicos)
     .get("/topicos/:id", TopicoController.listarTopicoPorId)
     
-const topicoSchema = new mongoose.Schema({
-}, { versionKey: false });
+/* const topicoSchema = new mongoose.Schema({
+}, { versionKey: false }); */
       
-const Topico = mongoose.model("Topico", topicoSchema);
+/* const Topico = mongoose.model("Topico", topicoSchema); */
       
 export default router;

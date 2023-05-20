@@ -9,9 +9,9 @@ router
     .get("/grupos", GrupoController.listarGrupo)
     .get("/grupos/:id", GrupoController.listarGrupoPorId)
     
-const grupoSchema = new mongoose.Schema({
+/* const grupoSchema = new mongoose.Schema({
 }, { versionKey: false });
       
 const Grupo = mongoose.model("Grupo", grupoSchema);
-      
+       */
 export default router;
