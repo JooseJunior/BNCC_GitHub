@@ -242,3 +242,36 @@ console.log(topicos.length + ' Topicos inseridos!');
 // encerrar a conexão com o banco de dados com uma mensagem no console
 db.close();
 console.log('Conexão com o banco de dados encerrada!');
+
+//==================================================================================
+// Gerar Linha do tempo aleatória
+
+await LinhaTempo.deleteMany();
+
+export const seedLinhaTempo = async () => {
+    try {
+      // Gerar dados aleatórios
+      const topico = faker.lorem.words(2);
+      const descricao = faker.lorem.sentence();
+      const criando_em = faker.date.past();
+      const atualizado_em = faker.date.recent();
+  
+      // Criar uma nova instância da LinhaTempo com os dados gerados
+      const linhaTempo = new LinhaTempo({ topico, descricao, criando_em, atualizado_em });
+  
+      // Salvar a linha do tempo no banco de dados
+      await linhaTempo.save();
+  
+      console.log('Seed de LinhaTempo concluída');
+    } catch (err) {
+      console.error('Erro na seed de LinhaTempo:', err);
+    }
+    seedLinhaTempo(1);
+await LinhaTempo.collection.insertMany(LinhaTempo);
+console.log(LinhaTempo.length + ' Linha do tempo inserida!');
+
+// encerrar a conexão com o banco de dados com uma mensagem no console
+db.close();
+console.log('Conexão com o banco de dados encerrada!');
+
+};

@@ -1,53 +1,53 @@
-//Novo
-import LinhaTempo from ('../models/LinhaTempo');
+import LinhaTempo from '../models/LinhaTempo';
 
-exports.listarLinhaTempo = async function(req, res) {
-  try {
-    const linhaTempo = await LinhaTempo.find().sort({ criando_em: 1 });
-    res.json(linhaTempo);
-  } catch (err) {
-    res.status(500).send(err);
+export default class LinhaTempoController {
+  static async listarLinhaTempo(req, res) {
+    try {
+      const linhaTempo = await LinhaTempo.find().sort({ criando_em: 1 });
+      res.json(linhaTempo);
+    } catch (err) {
+      res.status(500).send(err);
+    }
   }
-};
 
-exports.obterLinhaTempo = async function(req, res) {
-  try {
-    const linhaTempo = await LinhaTempo.findById(req.params.id);
-    res.json(linhaTempo);
-  } catch (err) {
-    res.status(500).send(err);
+  static async obterLinhaTempo(req, res) {
+    try {
+      const linhaTempo = await LinhaTempo.findById(req.params.id);
+      res.json(linhaTempo);
+    } catch (err) {
+      res.status(500).send(err);
+    }
   }
-};
 
-exports.adicionarLinhaTempo = async function(req, res) {
-  const { topico, descricao, criando_em, atualizado_em } = req.body;
-  const linhaTempo = new LinhaTempo({ topico, descricao, criando_em, atualizado_em });
-  try {
-    await linhaTempo.save();
-    res.status(201).json(linhaTempo);
-  } catch (err) {
-    res.status(500).send(err);
+  static async adicionarLinhaTempo(req, res) {
+    const { topico, descricao, criando_em, atualizado_em } = req.body;
+    const linhaTempo = new LinhaTempo({ topico, descricao, criando_em, atualizado_em });
+    try {
+      await linhaTempo.save();
+      res.status(201).json(linhaTempo);
+    } catch (err) {
+      res.status(500).send(err);
+    }
   }
-};
 
-exports.atualizarLinhaTempo = async function(req, res) {
-  try {
-    const linhaTempoAtualizada = await LinhaTempo.findByIdAndUpdate(req.params.id, req.body, { new: true });
-    res.json(linhaTempoAtualizada);
-  } catch (err) {
-    res.status(500).send(err);
+  static async atualizarLinhaTempo(req, res) {
+    try {
+      const linhaTempoAtualizada = await LinhaTempo.findByIdAndUpdate(req.params.id, req.body, { new: true });
+      res.json(linhaTempoAtualizada);
+    } catch (err) {
+      res.status(500).send(err);
+    }
   }
-};
 
-exports.removerLinhaTempo = async function(req, res) {
-  try {
-    await LinhaTempo.findByIdAndDelete(req.params.id);
-    res.json({ mensagem: 'Linha do tempo removida com sucesso!' });
-  } catch (err) {
-    res.status(500).send(err);
+  static async removerLinhaTempo(req, res) {
+    try {
+      await LinhaTempo.findByIdAndDelete(req.params.id);
+      res.json({ mensagem: 'Linha do tempo removida com sucesso!' });
+    } catch (err) {
+      res.status(500).send(err);
+    }
   }
-};
-
+}
 
 //Esse é o controller que contém funções para manipular as solicitações HTTP feitas às rotas do aplicativo para a entidade LinhaTempo. Cada função do controlador manipula uma solicitação HTTP diferente, conforme detalhado a seguir:
 

@@ -1,5 +1,5 @@
 import express from "express" //Unica importação que não referencia um arquivo
-import teste from "./teste.js" //Importar arquivos dentro da pasta Rotas
+
 import usuarios from "../routes/UsuarioRoutes.js"
 import login from "../routes/LoginRoutes.js"
 

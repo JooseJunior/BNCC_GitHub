@@ -3,10 +3,10 @@ import LinhaTempoController from "../controllers/LinhaTempoController.js";
 
 const router = express.Router();
 
-router.get('/', LinhaTempoController.listarLinhaTempo);
-router.get('/:id', LinhaTempoController.obterLinhaTempo);
-router.post('/', LinhaTempoController.adicionarLinhaTempo);
-router.put('/:id', LinhaTempoController.atualizarLinhaTempo);
-router.delete('/:id', LinhaTempoController.removerLinhaTempo);
+router.get('/linhatempo', LinhaTempoController.listarLinhaTempo);
+router.get('/linhatempo/:id', LinhaTempoController.obterLinhaTempo);
+router.post('/linhatempo', LinhaTempoController.adicionarLinhaTempo);
+router.put('/linhatempo/:id', LinhaTempoController.atualizarLinhaTempo);
+router.delete('/linhatempo/:id', LinhaTempoController.removerLinhaTempo);
 
 export default router;
