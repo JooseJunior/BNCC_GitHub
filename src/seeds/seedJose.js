@@ -60,7 +60,7 @@ await Grupo.deleteMany();
 const grupos = [];
 
 // Função para retornar o nome de alguns grupos fictícios
-const grupos_array = [ 'Administrador', 'Normal']
+const grupos_array = ['Administrador', 'Normal']
 
 function getGrupoName(i) {
     return grupos_array[i].toString();
