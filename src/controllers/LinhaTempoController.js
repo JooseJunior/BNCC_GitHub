@@ -1,4 +1,5 @@
-import LinhaTempo from '../models/LinhaTempo';
+import LinhaTempo from '../models/LinhaTempo.js';
+
 
 export default class LinhaTempoController {
 
@@ -8,10 +9,11 @@ export default class LinhaTempoController {
     try {
       const { titulo, conteudo } = req.body;
   
-      const novoDocumento = new LinhaTempo({ titulo, conteudo });
+      const novoDocumento = new LinhaTempo({ titulo, conteudo, criando_em:new Date() });
       await novoDocumento.save();
-  
-      this.obterLinhaDoTempo(req, res);
+      
+      const linhaDoTempo = await LinhaTempo.find({}).sort({criando_em:1});
+     res.json({ novoDocumento, linhaDoTempo});
     } catch (err) {
       console.error(err);
       res.status(500).send('Erro ao adicionar documento');
@@ -64,11 +66,13 @@ export default class LinhaTempoController {
 
 static async obterLinhaTempo(req, res) {
   try {
-    const documentos = await LinhaTempo.find({}).sort({ data: 1 });
+    const documentos = await LinhaTempo.find({}).sort({ criando_em: 1 });
+
 
     const linhaDoTempo = documentos.map((documento) => ({
       titulo: documento.titulo,
-      data: documento.data,
+      conteudo:documento.conteudo,
+      data:  `${documento.criando_em.getMonth() + 1}/${documento.criando_em.getFullYear()}`,
     }));
 
     res.json(linhaDoTempo);

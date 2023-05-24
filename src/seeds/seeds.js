@@ -252,10 +252,10 @@ const seedLinhaTempo = (qtdDocumentos) => {
   for (let i = 0; i < qtdDocumentos; i++) {
     const titulo = faker.lorem.words(2);
     const conteudo = faker.lorem.sentence();
-    const criado_em = faker.date.past();
+    const criando_em = faker.date.past();
     const atualizado_em = faker.date.recent();
 
-    const documento = new LinhaTempo({ titulo, conteudo, criado_em, atualizado_em });
+    const documento = new LinhaTempo({ titulo, conteudo, criando_em, atualizado_em });
     documentos.push(documento);
   }
 
