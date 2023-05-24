@@ -5,6 +5,7 @@ import mongoosePaginate from 'mongoose-paginate-v2';
 
 const linhaTempoSchema = new mongoose.Schema({
     titulo:  { type: String, required:[true, 'Título obrigatório'] },
+    conteudo: {type: String, required:[true, 'Título obrigatório']},
     criando_em: { type: Date, default: Date.now }, 
     atualizado_em: { type: Date}
 },
