@@ -16,4 +16,3 @@ linhaTempoSchema.plugin(mongoosePaginate);
 const linhatempos = mongoose.model('linhatempos', linhaTempoSchema);
 
 export default linhatempos;
-

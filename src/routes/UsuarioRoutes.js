@@ -3,12 +3,13 @@ import UsuarioController from "../controllers/UsuarioController.js";
 // import AuthMiddleware from "../middlewares/AuthMiddleware.js";
 import mongoose from "mongoose";
 
+
 const router = express.Router();
 
-const usuarioSchema = new mongoose.Schema({
-}, { versionKey: false });
-  
-const Usuario = mongoose.model("Usuario", usuarioSchema);
+/* const usuarioSchema = new mongoose.Schema({
+}, { versionKey: false }); */
+  /* 
+const Usuario = mongoose.model("Usuario", usuarioSchema); */
   
 router
     .post("/usuarios", UsuarioController.cadastrarUsuario)
