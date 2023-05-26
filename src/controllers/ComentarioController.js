@@ -1,10 +1,10 @@
 //Novo
-const Comentario = req('../models/Comentario');
+const Comentario = require('../models/Comentario');
 
 // Função para criar um novo comentário
 const criarComentario = async (req, res) => {
   try {
-    const comentario = new Comentario(req.body);
+    const comentario = new Comentario(req.body.comentario);
     await comentario.save();
     res.status(201).json({ message: 'Comentário criado com sucesso!', comentario });
   } catch (error) {
