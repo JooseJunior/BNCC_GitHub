@@ -1,8 +1,8 @@
+//JOSE
 import mongoose from "mongoose";
 import mongoosePaginate from 'mongoose-paginate-v2';
 
 // Schema -> construtor para instanciar objetos no banco
-
 const usuarioSchema = new mongoose.Schema({
     nome: { type: String, required: [true, 'Nome obrigatório'], min: 6, max: 255, trim: true },
     email: {

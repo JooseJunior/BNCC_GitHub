@@ -1,3 +1,4 @@
+//GUSTAVO
 import Topico from "../models/Topico.js";
 
 export default class TopicoController{

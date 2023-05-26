@@ -1,8 +1,8 @@
+//GUSTAVO
 import mongoose from "mongoose";
 import mongoosePaginate from 'mongoose-paginate-v2';
 
 // Schema -> construtor para instanciar objetos no banco
-
 const topicoSchema = new mongoose.Schema({
     titulo: { type: String, required:[true, 'Título obrigatório'] },
     descricao: { type: String, required: [true, 'Descrição obrigatória'] },

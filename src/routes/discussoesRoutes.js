@@ -1,10 +1,9 @@
+//
 import express from "express";
 import DiscussoesController from "../controller/discussoesController.js";
 import AuthMidleware from "../middlewares/AuthMidleware.js";
 
-
 const router = express.Router();
-
 
 router
   .get("/discussoes", DiscussoesController.listarDiscussoes)
