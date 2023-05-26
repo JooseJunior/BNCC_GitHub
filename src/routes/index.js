@@ -1,7 +1,8 @@
 import express from "express" //Unica importação que não referencia um arquivo
+
 import usuarios from "../routes/UsuarioRoutes.js"
 import login from "../routes/LoginRoutes.js"
-import topicos from "../routes/TopicoRoutes.js"
+import LinhaTempo from "..//routes/LinhaTempoRoutes.js"
 
 const routes = (app) => {
     app.route('/').get((rep, res) => {
@@ -12,9 +13,9 @@ const routes = (app) => {
         express.json(),
         usuarios,
         login,
-        topicos
+        LinhaTempo
     )
-
+    
 }
 
 export default routes;

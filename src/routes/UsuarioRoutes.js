@@ -1,6 +1,7 @@
 import express from "express";
 import UsuarioController from "../controllers/UsuarioController.js";
 // import AuthMiddleware from "../middlewares/AuthMiddleware.js";
+import mongoose from "mongoose";
 
 
 const router = express.Router();

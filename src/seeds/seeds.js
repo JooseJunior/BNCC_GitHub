@@ -35,8 +35,8 @@ const rotas_array = [
     'usuarios:id',
     'rotas',
     'rotas:id',
-    'linhatempo',
-    'linhatempo:id',
+    'linha-do-tempo',
+    'linha-do-tempo:id',
     'topicos',
     'topicos:id'
 ]
@@ -239,6 +239,32 @@ seedTopicos(5);
 await Topico.collection.insertMany(topicos);
 console.log(topicos.length + ' Topicos inseridos!');
 
-// encerrar a conexão com o banco de dados com uma mensagem no console
+
+
+
+//=================Seed para adicionar documentos e a linha do tempo aleatória============//
+
+await LinhaTempo.deleteMany();
+
+const documentos = [];
+
+const seedLinhaTempo = (qtdDocumentos) => {
+  for (let i = 0; i < qtdDocumentos; i++) {
+    const titulo = faker.lorem.words(2);
+    const conteudo = faker.lorem.sentence();
+    const criando_em = faker.date.past();
+    const atualizado_em = faker.date.recent();
+
+    const documento = new LinhaTempo({ titulo, conteudo, criando_em, atualizado_em });
+    documentos.push(documento);
+  }
+
+  return documentos;
+};
+
+const linhaTempo = seedLinhaTempo(10);
+await LinhaTempo.collection.insertMany(linhaTempo);
+console.log(linhaTempo.length + ' Documentos da Linha do Tempo Inseridos!');
+
 db.close();
 console.log('Conexão com o banco de dados encerrada!');
