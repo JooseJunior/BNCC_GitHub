@@ -1,7 +1,6 @@
 //JOSE
 import express from "express";
 import UsuarioController from "../controllers/UsuarioController.js";
-import mongoose from "mongoose";
 // import AuthMiddleware from "../middlewares/AuthMiddleware.js";
 import mongoose from "mongoose";
 

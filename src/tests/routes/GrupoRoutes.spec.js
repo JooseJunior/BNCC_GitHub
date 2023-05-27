@@ -1,9 +1,10 @@
 //Guilherme
 
+import { describe, expect, it, jest, beforeEach, afterAll, afterEach } from '@jest/globals';
 import request from "supertest";
 import express from "express";
-import GrupoRoutes from "../GrupoRoutes";
-import GrupoController from "../controllers/GrupoController";
+import GrupoRoutes from "../../routes/GrupoRoutes.js";
+import GrupoController from "../../controllers/GrupoController.js";
 
 //Cria uma instancia do aplicativo Express
 const app = express();
@@ -14,7 +15,7 @@ describe("Testes das rotas do GrupoRoutes", () => {
     it("Deve cadastrar um grupo com sucesso", async () => {
         const grupo = {
             nome: "Grupo de teste",
-            descricao: "Descrição do grupo de teste",
+            descricao: "Descrição do grupo de teste"
         };
 
         //Mock da função cadastrarGrupo no GrupoController
