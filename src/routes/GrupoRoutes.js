@@ -6,13 +6,12 @@ import GrupoController from "../controllers/GrupoController.js";
 const router = express.Router();
 
 router
+
     .post("/grupos", GrupoController.cadastrarGrupo)
+    .put("/grupos/:id", GrupoController.atualizarGrupo)
+    .patch("/grupos/:id", GrupoController.atualizarGrupo)
+    .delete("/grupos/:id", GrupoController.excluirGrupo)
     .get("/grupos", GrupoController.listarGrupo)
     .get("/grupos/:id", GrupoController.listarGrupoPorId)
-    
-/* const grupoSchema = new mongoose.Schema({
-}, { versionKey: false });
-      
-const Grupo = mongoose.model("Grupo", grupoSchema);
-       */
+
 export default router;
