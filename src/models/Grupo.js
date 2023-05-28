@@ -9,7 +9,7 @@ const grupoSchema = new mongoose.Schema({
     ativo: { type: Boolean, default: true },
     rotas: [{
         _id: { type: mongoose.Schema.Types.ObjectId, ref: 'rotas' },    //ID da rota
-        rota: { type: String, trim: true, required:[true, 'Rota obrigatória'] },             //Nome da rota
+        rota: { type: String, trim: true, required:[true, 'Rota obrigatória'] }, //Nome da rota
         verbo_get: { type: Boolean },
         verbo_put: { type: Boolean },
         verbo_patch: { type: Boolean },

@@ -23,3 +23,26 @@ Roteiro:
 =======================================================================
 npm i nodemon //Instalar nodemon
 npm start // Para ver no navegador
+
+=======================================================================
+Modelo de listagem:
+
+static listarUsuarioId = async (req,res) => {
+    try{
+        const id = req.params.id
+
+        usuarios.findById(id).then(async (usuario) => {
+            let user =JSON.parse(JSON.stringify(usuario))
+            user.grupos = await grupos.find({_id: {$in: user.grupos}}).lean()
+
+            return res.status(200).send(user)
+        })
+        .catch((err) => {
+            return res.status(400).json([{error: true, code: 400, message: "ID invalido ou não encontrado"}])
+        })
+    }catch (err){
+        console.error(err)
+        return res.status(500).json({error: true, code: 500, message: "Erro interno do Servidor"})
+
+    }
+}
