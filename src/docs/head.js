@@ -8,10 +8,10 @@ const swaggerOptions = {
     openapi: "3.0.0",
     info: {
       title: "daw r ",
-      description: "API para controlar os atendimentos prestados pelo órgão",
+      description: "API para controlar Plataforma de Discussão BNCC",
       version: "1.0.0",
       contact: {
-        name: "API-CRAS",
+        name: "API-BNCC",
         email: "gilberto.silva@ifro.edu.br",
         url: "fslab.dev"
       },
