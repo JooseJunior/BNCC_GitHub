@@ -78,6 +78,7 @@ export default class GrupoController{
                 page: parseInt(page) || 1,
                 limit: parseInt(perPage) > 10 ? 10 : parseInt(perPage) || 10
             };
+            
 
             //Grupo validado
             if(nome){
