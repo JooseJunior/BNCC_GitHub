@@ -74,7 +74,7 @@ describe('/GET/ID em topicos', () => {
 });
 
 describe('/POST em topicos', () => {
-    it.skip("Deve casdastrar um Topico", async () => {
+    it("Deve casdastrar um Topico", async () => {
         const dataTopico = Date.now();
         const dados = await request(app)
             .post('/topicos')
