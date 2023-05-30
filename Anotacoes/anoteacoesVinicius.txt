@@ -1,0 +1,40 @@
+    Testes de unidade para os métodos individuais:
+       1. Teste o método AdicionarDocumento para garantir que um documento seja adicionado corretamente ao banco de dados e que a resposta JSON seja retornada corretamente.
+
+       2. Teste o método atualizarDocumento para verificar se um documento é atualizado corretamente no banco de dados e se a resposta JSON é retornada corretamente.
+
+       3. Teste o método removerDocumento para confirmar se um documento é removido corretamente do banco de dados e se a resposta JSON é retornada corretamente.
+
+       4. Teste o método obterLinhaTempo para garantir que a linha do tempo seja obtida corretamente do banco de dados e que a resposta JSON seja retornada corretamente.
+
+
+===================================================================================================================================================
+
+
+    Testes de integração:
+        Realize testes de integração que envolvam chamadas aos métodos do controlador LinhaTempoController e verifique se as interações com o banco de dados estão corretas e se as respostas são retornadas conforme esperado.
+
+
+    Testes de cobertura de código:
+        Utilize ferramentas de teste de cobertura de código para garantir que todos os trechos do código do controlador sejam testados adequadamente.
+
+
+    Testes de manipulação de erros:
+        Crie testes que verifiquem o comportamento do controlador em caso de erros, como falhas ao adicionar, atualizar ou remover documentos. Verifique se as respostas de erro são retornadas corretamente e se o tratamento de exceções está sendo feito adequadamente.
+
+
+    Testes de validação de entrada:
+        Teste se o controlador está validando corretamente as entradas, como o título e o conteúdo do documento. Verifique se são tratados casos em que os campos estejam vazios ou com valores inválidos.
+
+
+
+===================================================================================================================================================
+
+
+
+CadastrarDocumento
+AtualizarDocumento
+ExcluirDocumento
+ListarDocumento
+ListarDocumentoPorId
+ListarLinhaDoTempo
