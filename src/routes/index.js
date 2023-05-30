@@ -1,6 +1,6 @@
 //TODOS
 import express from "express" //Unica importação que não referencia um arquivo
-import grupos from "../routes/GrupoRoutes.js"
+
 import usuarios from "../routes/UsuarioRoutes.js"
 import login from "../routes/LoginRoutes.js"
 import linhaTempo from "../routes/LinhaTempoRoutes.js"
@@ -15,7 +15,6 @@ const routes = (app) => {
 
     app.use(
         express.json(),
-        grupos,
         usuarios,
         login,
         linhaTempo,
