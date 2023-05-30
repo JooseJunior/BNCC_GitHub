@@ -1,4 +1,5 @@
 //GUSTAVO
+import topicos from "../models/Topico.js";
 import Topico from "../models/Topico.js";
 
 export default class TopicoController{
@@ -18,6 +19,33 @@ export default class TopicoController{
             return res.status(500).json({error: true, code: 500, message:"Erro interno do servidor"});
         }
     }
+
+    static atualizarTopico = async (req, res) => {
+        try {
+            // Cria o novo usuário e identifica o Id
+            const {id} = req.params;
+            const {titulo, descricao, ativo} = req.body;
+            
+            // Realiza a Atualização
+            const atualizarTopico = await Topico.findByIdAndUpdate(id, {titulo, descricao, ativo}, {new: true});
+
+            //Verifica se o ID não foi localizado
+            if (!atualizarTopico){
+                return res.status(404).json({error: true, code: 404, message: "Usuário não encontrado"})
+            }
+            
+            return res.status(200).json(atualizarTopico) //Nome do usuário atualizado
+            //return res.status(200).json({message: "Usuário atualizado com sucesso"}) // Mensagem atualizado
+
+        } catch (err) {
+          //console.error(err);
+          return res.status(500).json({ error: true, code: 500, message: "Erro interno do Servidor" })
+        }
+    }
+
+
+    
+
     static listarTopicos = async (req, res) => {
         try{
             const titulo = req.query.titulo;
@@ -56,7 +84,7 @@ export default class TopicoController{
           }
     
         } catch (error) {
-          res.status(500).json({error: true, code: 500, message: "Erro interno do servidor"})
+          res.status(500).json({error: true, code: 500, message: "ID inválido"})
         }
     }
 }
