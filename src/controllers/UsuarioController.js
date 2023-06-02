@@ -1,7 +1,4 @@
-//JOSE
-//import Grupo from "../models/Grupo.js";
 import Usuario from "../models/Usuario.js";
-import bcrypt from "bcryptjs";
 
 export default class UsuarioController{
     static cadastrarUsuario = async (req, res) => {
