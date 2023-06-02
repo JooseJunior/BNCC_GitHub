@@ -1,7 +1,10 @@
 //JOSE
+//TESTE DE UNIDADE
+
 import { describe, expect, it, jest,} from '@jest/globals';
 import Usuario from '../../models/Usuario.js'
 import UsuarioController from '../../controllers/UsuarioController.js';
+import mongoose from "mongoose";
 
 describe ( 'Deve retornar os testes de unidade de usuáro', () => {
 
@@ -12,18 +15,16 @@ describe ( 'Deve retornar os testes de unidade de usuáro', () => {
         email: 'jose.junior@hotmail.com',
         senha: '12345678',
         ativo: true,
-        grupos: [{}],
-        rotas: [{}]
+        grupos: null,
+        rotas: null
     };
 
     it('Deve instanciar um novo Usuário', () => {
         const usuario = new Usuario(objetoUsuario);
-
-        // expect(usuario).toEqual(expect.objectContaining(objetoUsuario));
-        
+        expect(usuario).toEqual(expect.objectContaining(objetoUsuario));
         expect(usuario).toHaveProperty('nome', 'Jose Junior');
     });
-
+    
     /*
     métodos a serem testados do controller:
     .post("/usuarios", UsuarioController.cadastrarUsuario)

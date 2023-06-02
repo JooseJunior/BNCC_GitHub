@@ -1,4 +1,6 @@
 //JOSE
+//TESTE DE INTEGRAÇÃO = SUPERTEST
+
 import { describe, expect, it, jest, beforeEach, afterAll, afterEach } from '@jest/globals';
 import mongoose from "mongoose";
 import app from '../../app';
@@ -61,8 +63,10 @@ const userTest = {
     rotas: [{}]
 }
 
+let usuarioId;
+
 describe('SuperTest de Usuários', () => {
-    let usuarioId;
+    
     it("Deve cadastrar um usuário", async () => {
         const dados = await request(app)
             .post('/usuarios')
