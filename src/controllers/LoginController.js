@@ -1,5 +1,5 @@
 import User from '../models/Usuario.js';
-import grupos from '../models/Grupo.js';
+/* import grupos from '../models/Grupo.js'; */
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
 
@@ -20,11 +20,11 @@ class LoginController {
       return res.status(400).json([{ code: 400, message: "Usuário inativo!" }])
     }
 
-    let user = JSON.parse(JSON.stringify(userExist));
+    /* let user = JSON.parse(JSON.stringify(userExist));
     user.grupos = await grupos.find({ _id: { $in: user.grupos } }).lean();
     for (let i = 0; i < user.grupos.length; i++) {
       user.grupos[i].unidades = await unidades.find({ _id: { $in: user.grupos[i].unidades } }).lean();
-    }
+    } */
 
     return res.status(200).json({
       user: {
@@ -32,8 +32,7 @@ class LoginController {
         nome: userExist.nome,
         email: userExist.email,
         ativo: userExist.ativo,
-        rotas: userExist.rotas,
-        grupos: user.grupos
+        rotas: userExist.rotas
       },
       token: jwt.sign(
         {

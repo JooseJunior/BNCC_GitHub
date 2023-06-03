@@ -1,8 +1,10 @@
 import Usuario from "../models/Usuario.js";
+import bcrypt from "bcryptjs";
 
 export default class UsuarioController{
     static cadastrarUsuario = async (req, res) => {
         try {
+
             // Cria o novo usuário
             const usuario = new Usuario(req.body);
             
@@ -11,11 +13,13 @@ export default class UsuarioController{
                 return res.status(400).json({error: true, code: 400, message: "Nome deve ter pelo menos 3 caracteres"});
             }
 
+            const senhaHash =bcrypt.hashSync(usuario.senha, 8); // criptografa a senha
+            usuario.senha = senhaHash;
+
             // Realiza o cadastro
             const usuarioSalvo = await usuario.save()
             //await usuario.save()
             return res.status(201).json(usuarioSalvo);
-
         } catch (error){
               console.log(error)
               return res.status(500).json({error: true, code: 500, message:"Erro interno do servidor"});
